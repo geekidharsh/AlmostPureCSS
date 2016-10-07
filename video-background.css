@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+html, body {
+  margin: 0 0 0 0;
+  font-family: 'Lato', sans-serif; }
+
+header {
+  height: 100vh;
+  background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2015/05/Boston-wallpaper-1.jpg");
+  background-size: cover;
+  z-index: 2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative; }
+
+.header-wrap {
+  position: relative; }
+
+h1 {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  z-index: 1;
+  font-size: 50px;
+  color: ghostwhite;
+  text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.7); }
+
+.head-link {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  text-decoration: overline;
+  color: aliceblue;
+  margin: 20px auto 20px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.7); }
+
+.head-link:hover {
+  position: relative;
+  display: block;
+  font-size: 27px;
+  text-decoration: none;
+  margin: 20px auto 20px; }
+
+header::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5); }
+
+.content {
+  background-color: beige; }
+
+p {
+  max-width: 600px;
+  padding: 20px;
+  margin: 0px auto 0px;
+  display: block;
+  color: darkslategrey; }
+
+/*# sourceMappingURL=video-background.css.map */
