@@ -1,0 +1,385 @@
+<html>
+    <head>
+        <title> Transition elements in CSS</title>
+        <style>
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+body{
+                padding:50px; 
+                background-color:#222;
+}
+
+h2{
+                font-family: 'Open Sans', san serif;
+                color: #B3E5FC;
+                text-align:left;
+}
+  
+            div{
+                margin-bottom:40px;
+            }
+            
+            
+            .box{
+                display: inline-block;
+                background-color: darkslategray;
+                height: 40px;
+                width: 30px;
+                position: relative; 
+                opacity:1;
+                box-shadow: 1px 2px 5px black;
+            }
+            
+            .box::before{
+                content:"";
+                display: block;
+                background-color: #EF5350;
+                width: 5px;
+                height: 40px;
+                opacity:1;
+                }
+
+             
+            .box:hover::before{
+                display: none;}
+            
+            
+            .box:hover{
+                
+                animation: boxframe 4s ease-in-out infinite 1s;
+                animation-fill-mode: forwards;
+            }
+            @keyframes boxframe {
+                0%{
+                    width:5px;
+                    background-color:#EF5350;
+                }
+                
+                15%{
+                    width: 25px;
+                }
+              25%{
+                  width:40px; 
+                  background-color:#FF7043;
+              }
+              45%{
+                width:115px;
+                background-color:#AFB42B;
+              }
+              
+              50%{
+                    width: 100px;
+                    background-color: #558B2F;
+                }
+              75p%{
+                  width:200px;
+                  background-color:lightgreen;
+              }
+                100%{
+                    opacity: 1; 
+                    width: 300px;
+                    background-color: #64DD17;
+
+                }
+            }
+            
+            
+            /* Circle load*/
+            
+            .circle{
+                display: block;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: relative; 
+            }
+            
+            .circle::before, .circle::after{
+                content: "";
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+            }
+            
+            
+            /* spin load */
+            .spin-load{
+                display: block;
+                background-color: darkslategray;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: absolute; 
+                box-shadow: 1px 2px 5px black;
+            }
+            
+            .spin-load:after{
+                content: "";
+                top: -3px;
+                left:-3px;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: absolute;
+                border: 3px solid transparent;
+                border-top-color: #EF5350;
+                border-bottom-color: #EF5350;
+                animation: spinloader 4s linear infinite 1s;
+                
+            }
+            
+            @keyframes spinloader{
+                10%{
+                    transform: rotate(30deg) scaleX(1) scaleY(1); 
+                    border-top-color: #EF5350;
+                    border-bottom-color: #EF5350;
+                    
+                    
+                }
+                
+                25%{
+                    transform: rotate(75deg) scaleX(1) scaleY(1);
+                    border-top-color: #FF7043;
+                    border-bottom-color: #FF7043;
+                    
+                    
+                }
+                
+                45%{
+                    
+                    transform: rotate(90deg) scaleX(1) scaleY(1);
+                    border-top-color: #AFB42B;
+                    border-bottom-color: #AFB42B;               
+                }
+                
+                50%{
+                    opacity: .5;
+                    transform: rotate(120deg) scaleX(1.1) scaleY(1.1);
+                    
+                }
+                
+                60%{
+                    transform: rotate(210deg) scaleX(1.2) scaleY(1.2);
+                    border-top-color: lightgreen;
+                    border-bottom-color: lightgreen;
+                }
+                
+                80%{
+                    
+                    transform: rotate(270deg) scaleX(1.1) scaleY(1.1);
+                    border-bottom-color: #AFB42B; 
+                    
+                }
+                
+                100%{
+                    opacity:1; 
+                    transform: rotate(360deg) scaleX(1) scaleY(1);
+                    border-top-color: #64DD17;
+                    border-bottom-color: #64DD17;                                 
+                }
+            
+            }
+            
+            /* Spin clock*/
+            
+            .spin-clock{
+                top:90px;
+                left:-5px;
+                background: none;
+                border: 4px solid darkslategray;
+            }
+            
+            .spin-clock:after{
+                content: "";
+                width: 3px;
+                height: 40px;
+                top:50%;
+                left: 50%;
+                position: absolute;
+                background-color: #EF5350;
+                animation: spinclock 4s linear infinite 1s;
+                -webkit-transform-origin: top center;
+                transform-origin: top center;
+                 box-shadow: 2px 5px 5px black;
+            }
+            
+            @keyframes spinclock {
+                  10%{
+                    transform: rotate(36deg); 
+                    background-color: #EF5350;                    
+                }
+                
+                20%{
+                    transform: rotate(72deg);
+                    border-top-color: #FF7043;
+                    border-bottom-color: #FF7043;
+                        
+                }
+                
+                40%{
+                    transform: rotate(144deg);
+                    background-color: orange;
+                }
+                
+                60%{
+                      transform: rotate(216deg);
+                    background-color: darkseagreen;
+                }
+                80%{
+                    
+                    transform: rotate(288deg);
+                    border-bottom-color: green; 
+                    
+                }
+                
+                100%{
+                    transform: rotate(360deg);
+                    background-color: #64DD17;                               
+                }
+            
+            }
+            
+            /* pulse-motion*/
+            
+            .pulse-motion span{
+                display: block;
+                height: 20px;
+                width: 20px;
+                background: darkslategray;
+                border-radius: 50%;
+                position: absolute;
+                top: 100px;
+                box-shadow: 2px 2px 5px black;
+                
+            }
+            
+            /* pulse-motion*/
+            
+            .pulse-motion span{
+                display: block;
+                height: 20px;
+                width: 20px;
+                background: darkslategray;
+                border-radius: 50%;
+                position: absolute;
+                top: 10 0px;
+                box-shadow: 2px 2px 5px black;
+                
+            }
+            
+            .pulse-motion span:nth-child(1){
+                left:0px;
+                animation: bounce 2s ease-in-out infinite 0s;
+                
+            }
+            
+            .pulse-motion span:nth-child(2){
+                left: 25px;
+                animation: bounce 2s ease-in-out infinite 0.5s;
+            }
+            
+            .pulse-motion span:nth-child(3){
+                left: 50px;
+                animation: bounce 2s ease-in-out infinite 0.75s;
+            }
+            
+            @keyframes bounce{
+                
+              0%{
+                -webkit-transform: translateY(0px);
+                        transform: translateY(0px);
+                        background-color: darkslategray;
+              } 
+              
+                
+                 25% {
+                -webkit-transform: translateY(-20px);
+                        transform: translateY(-20px);
+                        background-color: orange;
+                         
+                    }
+              75%{
+                   -webkit-transform: translateY(10px);
+                        transform: translateY(10px);
+                        background-color: #64DD17; 
+                        
+              }
+              
+              100% {
+                -webkit-transform: translateY(0px);
+                        transform: translateY(0px);
+                        
+                    }
+            }
+
+/* Drop loader*/
+            
+            .drop-loader:before , .drop-loader:after {
+                    
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: 50px;
+                margin-left: -25px;    
+                background: orangered;
+                animation: pulse 3s linear infinite;
+                opacity: 0;
+                box-shadow: 2px 2px 5px black;
+            }
+            
+            .drop-loader:before{
+                animation: dropload 3s ease-in-out infinite .66s;   
+            }
+            
+            .drop-loader:after{
+                animation: dropload 3s ease-in-out infinite 0.25s;   
+            }
+            
+            @keyframes dropload{
+                0%{
+                        transform: scale(.25);
+                        opacity:.3;
+                        
+                } 
+                
+                25%{
+                        transform: scale(.30);
+                        opacity:.3;
+                        background-color: darkorange;
+                }
+                
+                50%{
+                        transform: scale(.75);
+                        opacity:.5;
+                }
+                
+                75%{
+                        transform: scale(1.2);
+                        opacity:.5;
+                         background-color: darkslategray;
+                }
+                
+                100%{
+                        transform: scale(.8);
+                        opacity:1;
+                        background-color: #64DD17; 
+                }
+
+
+                
+            }
+            
+        </style>
+    </head>
+    <body>  <h2>Loaders and Spinners</h2>
+            <div class="box"></div>
+            <div class="circle spin-load"></div>
+            <div class="circle spin-clock"></div>
+            <div class="circle pulse-motion"> 
+                <span></span><span></span><span></span>
+            </div>
+              <div class="circle drop-loader"></div>
+            
+    </body>
+</html>

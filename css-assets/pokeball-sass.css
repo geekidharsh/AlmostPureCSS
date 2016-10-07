@@ -1,0 +1,155 @@
+/* Sass newbie*/
+/*Safari has some issues */
+@import "https://fonts.googleapis.com/css?family=Raleway";
+/*colors*/
+/* declare variables for ball dimensions*/
+body {
+  position: aboslute;
+  padding-left: 40%;
+  padding-top: 1em;
+  background-color: #222; }
+
+h2 {
+  padding-bottom: 1em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3em;
+  color: whitesmoke; }
+
+/* Ball design*/
+.halfball-black-top {
+  position: aboslute;
+  height: 9em;
+  width: 18em;
+  margin-top: 0.5;
+  margin-left: 0;
+  border-top-left-radius: 9em;
+  border-top-right-radius: 9em;
+  background-color: black; }
+
+.halfball-black-bottom {
+  position: aboslute;
+  margin-top: 1em;
+  height: 9em;
+  width: 18em;
+  border-bottom-left-radius: 9em;
+  border-bottom-right-radius: 9em;
+  background-color: whitesmoke; }
+
+.inner-ball-1 {
+  position: absolute;
+  margin-top: -11.5em;
+  margin-left: 7em;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  border: 0.5em black solid; }
+
+.red-ball {
+  position: absolute;
+  margin-top: -17.5em;
+  margin-left: 1em;
+  height: 16em;
+  width: 16em;
+  border-radius: 50%;
+  background-color: #a10; }
+
+/* Ball Animation code */
+@keyframes shake-top {
+  10% {
+    transform: rotateX(10deg) translateY(-10px); }
+  50% {
+    transform: rotateX(60deg) translateY(-50px); }
+  75% {
+    transform: translateY(-25px); }
+  100% {
+    transform: rotateX(10deg) translateY(0px); } }
+@keyframes shake-bottom {
+  10% {
+    transform: rotateX(10deg) translateY(10px); }
+  50% {
+    transform: rotateX(60deg) translateY(50px); }
+  75% {
+    transform: translateY(25px); }
+  100% {
+    transform: rotateX(10deg) translateY(0px); } }
+.shake-1 {
+  animation: shake-top;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 500ms; }
+
+.shake-2 {
+  animation: shake-bottom;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 500ms; }
+
+@keyframes ball-color {
+  10% {
+    background-color: #a10; }
+  25% {
+    background-color: indianred; }
+  50% {
+    background-color: #f25; }
+  75% {
+    background-color: #a10; }
+  100% {
+    background-color: #f25; } }
+.red-ball:hover {
+  animation: ball-color;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-delay: 100ms; }
+
+/* Pokeball code ends here*/
+/*Rough works below*/
+/* 
+@keyframes shake-Z {
+  10%{
+	transform: rotateZ(10deg);
+  background-color:$r;
+   }
+   50% {
+ 	transform: rotateZ(60deg);
+   }
+  75%{
+  	transform: rotateZ(120deg);
+  }
+  100%{
+   transform: rotateZ(180deg);
+   }
+}
+*/
+/*
+ @keyframes shake-top {
+  10%{
+  transform: rotateX(10deg) translateY(-10px);
+   }
+   50% {
+  transform: rotateX(60deg) translateY(-50px);
+   }
+  75%{
+    transform:  translateY(-25px);
+  }
+  100%{
+   transform: rotateX(10deg) translateY(0px) rotateY(180deg) translateX(50px) rotateX(40deg) rotateZ(10deg) skewX(5deg);
+   }
+}       
+*/
+@keyframes shake-bottom {
+  10% {
+    transform: rotateX(10deg) translateY(10px); }
+  50% {
+    transform: rotateX(60deg) translateY(50px); }
+  75% {
+    transform: translateY(25px); }
+  100% {
+    transform: rotateX(10deg) translateY(0px); } }
+.shake-Z {
+  animation: shake-Z;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 300ms; }
+
+/*# sourceMappingURL=pokeball-sass.css.map */

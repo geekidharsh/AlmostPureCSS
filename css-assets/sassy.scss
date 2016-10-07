@@ -1,0 +1,140 @@
+$r: red;
+$b: black;
+$margin: 10em;
+$radius: 18em;
+
+
+body{
+  padding: 2em;
+  background-color:grey;
+
+}
+
+.mountain4 {
+  fill: #8a7d9e;
+  transform: translateZ(-3.5px) scale(4.5) translateY(-20vh);
+  height: 30vh;
+}
+
+.halfball-black-top{
+position:aboslute;
+height: $radius/2;
+width: $radius;
+margin-top:0.5;
+margin-left:0;
+border-top-left-radius: $radius/2;
+border-top-right-radius: $radius/2;
+background-color: $b;
+
+}
+
+.halfball-black-bottom{
+position: aboslute;
+margin-top: 1em;
+height: $radius/2;
+width: $radius;
+border-bottom-left-radius: $radius/2;
+border-bottom-right-radius: $radius/2;
+background-color: whitesmoke;
+}
+
+.inner-ball-1{
+position: absolute;
+margin-top: -11.5em;
+margin-left: 7em;
+height: 3em;
+width: 3em;
+border-radius: 50%;  
+background-color:whitesmoke;
+border: .5em $b solid;
+}
+
+.red-ball{
+position:absolute;
+margin-top:-17.5em;
+margin-left:1em;
+height: $radius - 2em;
+width: $radius - 2em;
+border-radius: 50%;
+background-color:$r;
+}
+
+
+@keyframes shake-Z {
+  10%{
+	transform: rotateZ(10deg);
+  background-color:$r;
+   }
+   50% {
+ 	transform: rotateZ(60deg);
+   }
+  75%{
+  	transform: rotateZ(120deg);
+  }
+  100%{
+   transform: rotateZ(180deg) /*rotateY(180deg) translateX(50px) rotateX(40deg) rotateZ(10deg) skewX(5deg)*/;
+   }
+}
+ 
+ @keyframes shake-top {
+  10%{
+  transform: rotateX(10deg) translateY(-10px);
+   }
+   50% {
+  transform: rotateX(60deg) translateY(-50px);
+   }
+  75%{
+    transform:  translateY(-25px);
+  }
+  100%{
+   transform: rotateX(10deg) translateY(0px) /*rotateY(180deg) translateX(50px) rotateX(40deg) rotateZ(10deg) skewX(5deg)*/;
+   }
+}       
+
+ @keyframes shake-bottom {
+  10%{
+  transform: rotateX(10deg) translateY(10px);
+   }
+   50% {
+  transform: rotateX(60deg) translateY(50px);
+   }
+  75%{
+    transform:  translateY(25px);
+  }
+  100%{
+   transform: rotateX(10deg) translateY(0px) /*rotateY(180deg) translateX(50px) rotateX(40deg) rotateZ(10deg) skewX(5deg)*/;
+   }
+}
+
+ @keyframes ball-color {
+  10%{  background-color:$R;}
+  25% {  background-color:indianred;}
+  50%{  background-color:$r;}
+  75% { background-color:indianred;}
+  }
+  100%{
+  background-color:red;
+  }
+
+.red-ball:hover{
+   animation: ball-color ; animation-duration: 2s; animation-iteration-count: infinite; 
+   animation-delay: 100ms; 
+}
+         
+.shake-Z { 
+       animation: shake-Z; animation-duration: 5s; animation-iteration-count: infinite;
+  animation-delay: 300ms; 
+
+         }
+
+.shake-1 { 
+       animation: shake-top; animation-duration: 5s; animation-iteration-count: infinite;
+  animation-delay: 500ms; 
+         }
+
+.shake-2 { 
+       animation: shake-bottom; animation-duration: 5s; animation-iteration-count: infinite;
+  animation-delay: 500ms; 
+         }
+
+
