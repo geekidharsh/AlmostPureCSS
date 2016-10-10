@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+nav {
+  padding-top: 20px;
+  text-align: center; }
+  nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background: #2653d9;
+    border-radius: 2.5px; }
+    nav > ul > li {
+      float: left;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-family: "Lato", sans-serif;
+      color: #ffffff;
+      cursor: pointer; }
+      nav > ul > li:hover {
+        background: #1a1aff;
+        border-radius: 0px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+      nav > ul > li ul.drop-menu {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        padding: 0; }
+      nav > ul > li li {
+        background: #1a1aff;
+        color: #ffffff; }
+        nav > ul > li li:hover {
+          background: #9999ff;
+          animation-name: dropdown;
+            animation-name-duration: 200ms;
+            animation-name-fillmode: fill ease-in-out; }
+        nav > ul > li li:last-child {
+          border-radius: 0 0 2.5px 2.5px; }
+
+ul.drop-menu li {
+  display: none; }
+
+li:hover > ul.drop-menu li {
+  display: block; }
+
+.content {
+  display: block;
+  padding: 10px;
+  margin: auto;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  text-decoration: none; }
+
+/*# sourceMappingURL=pure-navbar.css.map */
