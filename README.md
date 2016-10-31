@@ -8,4 +8,4 @@ Some of the things worth laying out:
 - Advance transform, translate techniques
 - Link to github site: [almostpurecss](https://geekidharsh.github.io/AlmostPureCSS)
 
-****[Harshvardhan Pandey](http://www.harshvardhanpandey.com) ****
+****[Harshvardhan Pandey](http://www.harshvardhanpandey.com)****
