@@ -6,6 +6,6 @@ Some of the things worth laying out:
 - I add projects as i work on new things.
 - Preprocessors and frameworks I use: sass, scss, bootstrap, Jade, haml.
 - Advance transform, translate techniques
-- Link to github site: [site.almostpurecss](https://geekidharsh.github.io/AlmostPureCSS)
+- Link to github site: [almostpurecss](https://geekidharsh.github.io/AlmostPureCSS)
 
 ****[Harshvardhan Pandey](http://www.harshvardhanpandey.com)
