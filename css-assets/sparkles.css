@@ -1,0 +1,100 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+* {
+  box-sizing: border-box; }
+
+html {
+  margin: auto;
+  font-family: "Lato", sans-serif; }
+
+.artboard {
+  width: 800px;
+  height: 600px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  margin: 50px auto;
+  border: 20px white solid;
+  position: relative; }
+
+.sparkles > div {
+  width: 30px;
+  height: 30px;
+  position: absolute; }
+  .sparkles > div:before, .sparkles > div:after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    background: #FF7761;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .sparkles > div:after {
+    transform: translate(-50%, -50%) rotate(90deg); }
+  .sparkles > div.blue:before, .sparkles > div.blue:after {
+    background: #449BAA; }
+  .sparkles > div.orange:before, .sparkles > div.orange:after {
+    background: #FDC23E; }
+  .sparkles > div.med {
+    transform: scale(0.6); }
+  .sparkles > div.small {
+    transform: scale(0.4); }
+  .sparkles > div.one {
+    top: -53px;
+    left: 140px; }
+  .sparkles > div.two {
+    top: -46px;
+    left: 210px; }
+  .sparkles > div.three {
+    top: -6px;
+    left: 186px; }
+  .sparkles > div.four {
+    top: -16px;
+    left: 280px; }
+  .sparkles > div.five {
+    top: 44px;
+    left: 230px; }
+  .sparkles > div.six {
+    top: 94px;
+    left: 240px; }
+  .sparkles > div.seven {
+    top: 154px;
+    left: 216px; }
+  .sparkles > div.eight {
+    top: 187px;
+    left: 185px; }
+  .sparkles > div.nine {
+    top: 63px;
+    left: 325px; }
+  .sparkles > div.ten {
+    top: 124px;
+    left: 315px; }
+  .sparkles > div.eleven {
+    top: 161px;
+    left: 294px; }
+  .sparkles > div.twelve {
+    top: 27px;
+    left: 366px; }
+  .sparkles > div.thirteen {
+    top: 37px;
+    left: 415px; }
+  .sparkles > div.fourteen {
+    top: 87px;
+    left: 385px; }
+  .sparkles > div.fifteen {
+    top: 137px;
+    left: 378px; }
+  .sparkles > div.sixteen {
+    top: 97px;
+    left: 455px; }
+  .sparkles > div.pulse {
+    animation: pulse 1s linear infinite; }
+  .sparkles > div.pulse-1 {
+    animation: pulse 1s 300ms linear infinite; }
+  .sparkles > div.pulse-2 {
+    animation: pulse 1s 600ms linear infinite; }
+  .sparkles > div.pulse-3 {
+    animation: pulse 1s 900ms linear infinite; }
+
+/*# sourceMappingURL=sparkles.css.map */

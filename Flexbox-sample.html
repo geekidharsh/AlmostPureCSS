@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox - sample</title>
+  <style type="text/css">
+  @import url('https://fonts.googleapis.com/css?family=Lato:300'); 
+
+  html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 100px;
+  color: #191919;
+}
+
+input {
+  font-size: 10px;
+}
+
+h2, h3 {
+  margin: auto;
+  padding: auto;
+}
+
+.container{
+  max-width: 75%;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 20px grey;
+  color: #191919;
+}
+.form-row {
+ display: flex;
+
+}
+.form-row input{
+  background-color: white;
+  margin: 2px 10px;
+  flex: 1;
+}
+
+.column-layout {
+  max-width: 1300px;
+  background-color: #FFF;
+  margin: 40px auto 0 auto;
+  line-height: 1.65;
+  padding: 20px 50px;
+  display: flex;
+}
+
+.main-column {
+  flex: 2;
+  order: 3;
+}
+
+.sidebar-left {
+  flex: 1;
+  order: 1;
+}
+  .sidebar-left-menu{
+    margin: 0 -35px;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    max-width: 60px;
+    }
+    .sidebar-left-menu-items{
+      padding: 5px 0;
+      background: whitesmoke; 
+      border-radius: 2px;
+      line-height: 20px;
+      cursor: pointer;      
+      }
+      .sidebar-left-menu-items:hover{
+          background: white; 
+          box-shadow: 0px 0px 5px grey;
+      }
+
+  </style>
+</head>
+<body>
+<!-- first type of flex -->
+  <h2>Understanding flexboxes with a sample here</h2>
+  <div class="container">
+  <form action="">
+    <h3> Sample Modal</h3>
+    <div class="form-row">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="your name here">
+    </div>
+        <div class="form-row">
+          <label for="favColor">Favorite Color:</label>
+          <input type="color" id="favColor" placeholder="your favorite color">
+        </div> 
+          <div class="form-row">
+        <label for="name">Address:</label>
+        <input type="text" id="name" placeholder="your address">
+      </div>
+      <div class="form-row">
+        <label for="name">Zip:</label>
+        <input type="tel" id="name" placeholder="your local zipcode"> 
+      </div>
+     </div>
+  </form>
+</div>
+
+<!-- second type of flex -->
+<div class="column-layout">
+  <div class="main-column">
+    <h2>Main Column</h2>
+    <p> 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat libero pariatur amet laudantium minima consectetur tenetur. Repudiandae, autem, voluptate modi deleniti sequi voluptatum!</p>
+    <p> 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi earum fugit veniam amet quae sint vitae numquam dolore sunt quod a odio officia voluptate doloribus, at. Cum quasi mollitia eaque. Voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat libero pariatur amet laudantium.</p>
+  </div>
+  <div class="sidebar-left">
+    <h3>Left sidebar</h3>
+      <ul class="sidebar-left-menu"> Menu
+        <li class="sidebar-left-menu-items">One</li>
+        <li class="sidebar-left-menu-items">Two</li>
+        <li class="sidebar-left-menu-items">Three</li>
+        <li class="sidebar-left-menu-items">Four</li>
+      </ul>
+</div>
+
+</body>
+</html>

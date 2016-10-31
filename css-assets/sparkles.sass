@@ -1,0 +1,136 @@
+// declare variables 
+
+$orange: #FDC23E
+$blue: #449BAA
+$red: #FF7761
+
+// page style
+@import 'https://fonts.googleapis.com/css?family=Lato:300'
+
+*
+  box-sizing: border-box
+
+html
+  margin: auto
+  font-family: 'Lato', sans-serif
+
+.artboard
+  width: 800px
+  height: 600px
+  box-shadow: 0px 3px 20px rgba(0,0,0,0.2)
+  border-radius: 3px
+  margin: 50px auto
+  border: 20px white solid
+  position: relative
+  
+// creating sparkles here
+.sparkles > div
+  width: 30px
+  height: 30px
+  position: absolute
+
+  &:before,
+  &:after
+    content: ''
+    display: block
+    width: 40%
+    height: 100%
+    border-radius: 20px
+    background: $red
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  &:after
+    transform: translate(-50%, -50%) rotate(90deg)
+
+  &.blue:before,
+  &.blue:after
+    background: $blue
+
+  &.orange:before,
+  &.orange:after
+    background: $orange
+
+  &.med
+    transform: scale(0.6)
+
+  &.small
+    transform: scale(0.4)
+
+  &.one
+    top: -53px
+    left: 140px
+
+  &.two
+    top: -46px
+    left: 210px
+
+  &.three
+    top: -6px
+    left: 186px
+
+  &.four
+    top: -16px
+    left: 280px
+
+  &.five
+    top: 44px
+    left: 230px
+
+  &.six
+    top: 94px
+    left: 240px
+
+  &.seven
+    top: 154px
+    left: 216px
+
+  &.eight
+    top: 187px
+    left: 185px
+
+  &.nine
+    top: 63px
+    left: 325px
+
+  &.ten
+    top: 124px
+    left: 315px
+
+  &.eleven
+    top: 161px
+    left: 294px
+
+  &.twelve
+    top: 27px
+    left: 366px
+
+  &.thirteen
+    top: 37px
+    left: 415px
+
+  &.fourteen
+    top: 87px
+    left: 385px
+
+  &.fifteen
+    top: 137px
+    left: 378px
+
+  &.sixteen
+    top: 97px
+    left: 455px
+
+  &.pulse
+    animation: pulse 1s linear infinite
+
+  &.pulse-1
+    animation: pulse 1s 300ms linear infinite
+
+  &.pulse-2
+    animation: pulse 1s 600ms linear infinite
+
+  &.pulse-3
+    animation: pulse 1s 900ms linear infinite
